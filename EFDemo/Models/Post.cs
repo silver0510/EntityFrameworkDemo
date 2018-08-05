@@ -13,6 +13,7 @@ namespace EFDemo.Models
         [MaxLength(200)]
         public string Title { get; set; }
         public string Content { get; set; }
+        public string Abstract { get; set; }
 
         public string BlogID { get; set; }
         public Blog Blog { get; set; }

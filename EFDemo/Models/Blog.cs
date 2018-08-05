@@ -12,7 +12,7 @@ namespace EFDemo.Models
         public string BlogName { get; set; }
         public string Url { get; set; }
         public int Rating { get; set; }
-        public List<Post> Posts { get; set; }
+        public virtual List<Post> Posts { get; set; }
 
     }
 }
