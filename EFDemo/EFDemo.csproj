@@ -44,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,16 +70,38 @@
     <Compile Include="Migrations\201808050026556_AddPostAbstract.Designer.cs">
       <DependentUpon>201808050026556_AddPostAbstract.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808112350523_AddPostCreateDate.cs" />
+    <Compile Include="Migrations\201808112350523_AddPostCreateDate.Designer.cs">
+      <DependentUpon>201808112350523_AddPostCreateDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808112355299_AddPostEditDate.cs" />
+    <Compile Include="Migrations\201808112355299_AddPostEditDate.Designer.cs">
+      <DependentUpon>201808112355299_AddPostEditDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogDbContext.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808032155331_InitialCreate.resx">
@@ -92,6 +116,19 @@
     <EmbeddedResource Include="Migrations\201808050026556_AddPostAbstract.resx">
       <DependentUpon>201808050026556_AddPostAbstract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808112350523_AddPostCreateDate.resx">
+      <DependentUpon>201808112350523_AddPostCreateDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808112355299_AddPostEditDate.resx">
+      <DependentUpon>201808112355299_AddPostEditDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

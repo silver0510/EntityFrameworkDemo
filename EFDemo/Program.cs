@@ -13,9 +13,14 @@ namespace EFDemo
         {
             using(var db = new BlogDbContext())
             {
-                Blog blog = new Blog() { BlogID = 1, BlogName = "First Blog" };
+                Blog blog = new Blog() { BlogName = "Second Blog" };
                 db.Blogs.Add(blog);
-                db.SaveChanges();
+
+                var updateBlog = db.Blogs.Where(b => b.BlogID == 2).FirstOrDefault();
+                string bn = updateBlog.BlogName;
+                string url = updateBlog.Url;
+
+
 
                 var query = db.Blogs.Select(bl => bl).ToList();
                 foreach(var bl in query)

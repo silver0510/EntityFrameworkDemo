@@ -14,6 +14,8 @@ namespace EFDemo.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string Abstract { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime DateTime { get; set; }
 
         public string BlogID { get; set; }
         public Blog Blog { get; set; }
